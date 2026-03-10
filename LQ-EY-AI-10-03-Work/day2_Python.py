@@ -44,9 +44,9 @@ print(f"USA: {convertCashUSA:,}")
 print(f"EU: {convertCashEU:,}")
 print(f"Hyrule: {converCashHyrule:,} hiiiyaah!")
 
-'''
 
-colours=["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"]
+
+colours=["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet","Yellow"]
 
 print(colours)
 print(colours[0])
@@ -56,3 +56,41 @@ print(len(colours))
 colours.append("Sponge")
 
 print(colours)
+
+colours.remove("Yellow")
+
+print(colours)
+
+
+
+print(list(range(3,14,2)))
+print(list(range(3,14,4)))
+print(list(range(3,14,8)))
+print(list(range(0,-14,-1)))
+print(list(range(0,-14,-2)))
+
+
+
+
+for i in range(10):
+    print(i)
+
+'''
+
+names = ['Rupert','Amy','Stan','Cartman','Kenny','Kyle']
+namesSize = len(names)-1
+numCheck=0
+
+
+myMessage=""
+
+for n in names:
+
+    if numCheck < namesSize:
+        myMessage = myMessage + n + ", "
+    else:
+        myMessage = myMessage + n
+
+    numCheck+=1
+
+    print(myMessage)
