@@ -50,3 +50,9 @@ colours=["Red", "Orange", "Yellow", "Green", "Blue", "Indigo", "Violet"]
 
 print(colours)
 print(colours[0])
+
+print(len(colours))
+
+colours.append("Sponge")
+
+print(colours)
