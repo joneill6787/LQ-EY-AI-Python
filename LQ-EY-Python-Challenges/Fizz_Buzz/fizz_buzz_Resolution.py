@@ -85,7 +85,7 @@ while i <=100:
         # If you want to take this a step further and see why it is important
         # to use an if/elif instead of three if statements, feel free to change
         # the code to use three ifs instead, or run the below code (after removing
-        # the comments) to see what happens
+        # the comments) to see what happens:
 
 
 '''
