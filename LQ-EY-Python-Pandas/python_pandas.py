@@ -8,7 +8,7 @@ df_Sales=pd.read_csv("Sales.csv")
 print(df_Student.info())
 print(df_Sales.info())
 
-'''
+
 
 df_Student_Columns=df_Student["Student_Name"]
 
@@ -37,9 +37,50 @@ df_Student_Tail=df_Student.tail(3)
 
 df_Student_Info=df_Student.info()
 
+df_Student_Average_Grade=df_Student["Score"]
+
+
+    # This code assigns all column names to a list
+df_S_Columns=df_Student.columns
 
 '''
-    Outputs/Print Statements
+
+
+
+'''
+    Print Statements
 '''
 
-print(df_Student_Info)
+# print(df_S_Columns[2])
+# print(df_Student[df_Student[df_S_Columns[2]].isna()])
+# print(df_Student.dtypes)
+
+# df_Student[df_S_Columns[2]]=pd.to_numeric(df_Student[df_S_Columns[2]], errors='coerce')
+# df_Student[df_S_Columns[3]]=pd.to_numeric(df_Student[df_S_Columns[3]], errors='coerce')
+
+'''
+
+print(df_Student.dtypes)
+print(df_Student[df_Student[df_S_Columns[2]].isna()])
+print(df_Student[df_Student[df_S_Columns[3]].isna()])
+
+print(f"{df_Student['Score'].mean():.2f}")
+
+'''
+    # Grouping stuff
+
+# df_S_Groupby_SName=df_Student.groupby("Student_Name")["Score"]
+# print(df_S_Groupby_SName.min(),df_S_Groupby_SName.max())
+
+
+totalRev = df_Sales["Revenue"].sum()
+# gbRevenue = df_Sales.groupby("Month_Date")["Revenue"].sum()
+
+# print(f"Revenue: {totalRev}")             # Print total column revenue
+
+df_Sales["Date"] = pd.to_datetime(df_Sales["Date"], format="%d/%m/%Y")
+
+gbRevenue = df_Sales.groupby(df_Sales["Date"].dt.to_period("M"))["Revenue"].sum()
+
+
+print(gbRevenue)
