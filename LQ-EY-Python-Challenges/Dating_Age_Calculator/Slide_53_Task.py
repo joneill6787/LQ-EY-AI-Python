@@ -21,10 +21,20 @@ Part 3:
     For every 1 million you have in the bank, you can date someone a year younger.
         Modify your algorithm so that it takes into account your
         net worth in millions.
+
+Part 4:
+
+    Add validation to make sure the input recieved is a digit for both age and wealth
 '''
+
+    # This task uses functions, which have yet to be taught in class. 
 
 
 def testAgeCalculator():
+
+        # This function is just a test function.
+            # It does not take any input. It just tests against stored values in age. 
+
     age=[18,25,30,45,60,80,100]
 
     for i in age:
@@ -61,9 +71,14 @@ def datingAgeCalculator():
 
 def datingAgeMoneyCalculator():
 
-        # This function will resolve tasks 
+        # This function will resolve task 3 as well
+            # For task 4 I have converted the input immediately to "int" instead of using an
+                # int wrapper around an input: int(input)
+                # This is not a perfect solution, but works enough for this scenario.
 
     userAge= int(input("Please could I have your age so we can calculate who you can date?\n"))
+    
+    
     userWealth= int(input("And how much do you earn in millions per year?\n"))
 
     if(userWealth>100):
@@ -83,5 +98,7 @@ def datingAgeMoneyCalculator():
         print(f"You are {userAge} the youngest person you can date is the following age {dateAgeYoung}")
         print(f"You are {userAge} the oldest person you can date is the following age {dateAgeOld}")
 
+
+    # For reference, this is how you call a function in python:
 
 datingAgeMoneyCalculator()
